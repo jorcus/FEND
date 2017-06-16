@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Train To Klang map implemented in knockout.js">
+    <meta name="author" content="Jorcus">
+    <meta name="keywords" content="web developer, html, css, javascript">
+    <title>Neighborhood Map Project</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" media="(max-width: 670px)" href="css/responsive.css">
+    <link rel="stylesheet" href="css/infowindow.css">
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+</head>
+
+<body>
+    <div id="map"></div>
+    <input id="input" class="controls" placeholder="Filter location..." type="input" data-bind="textInput: query, valueUpdate: 'keypress'" autocomplete="off">
+    <div class="list scroll" id="list-toggle">
+        <ul data-bind="template: {name: 'marker', foreach:markers}">
+        </ul>
+        <script type="text/html" id="marker">
+            <div data-bind="visible: visible">
+                <a href="#" data-bind="attr: {id: id}">
+                    <li>
+                        <strong data-bind="text: title"></strong>
+                    </li>
+                </a>
+            </div>
+        </script>
+
+    </div>
+
+    <div class="weather-container">
+        <div id="weather-image-container">
+            <img src="images/weather-underground.png" alt="Weather Underground Logo">
+            <div class="forecast">
+                <h3>Malaysia - Kuala Lumpur</h3>
+                <ul style="margin: 0">
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="http://knockoutjs.com/downloads/knockout-3.4.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyArFazLmqn6iYNXX3LmqWHI8QY_W8TSabw&libraries=places&signed_in=true&callback=initialize" async defer onerror="MapError()"></script>
+
+</body>
+
+</html>

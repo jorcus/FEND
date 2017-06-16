@@ -1,0 +1,323 @@
+.front-infowindow {
+    position: relative;
+    width: 600px;
+    height: 360px;
+    overflow: hidden;
+    z-index: 0;
+    color: #000000;
+}
+.back-infowindow {
+    position: relative;
+    width: 600px;
+    height: 360px;
+    overflow: hidden;
+    z-index: 0;
+    color: #ffffff;
+}
+.background {
+    background-color: black;
+    position: absolute;
+    width: 600px;
+    height: 360px;
+    z-index: 1;
+}
+.redlinebottom {
+    left: -16px;
+    top: 316px;
+    position: absolute;
+    width: 632px;
+    height: 6px;
+    z-index: 2;
+}
+.bottomline {
+    background-color: #ffffff;
+    left: -2px;
+    top: 267px;
+    position: absolute;
+    width: 604px;
+    height: 52px;
+    z-index: 3;
+}
+.developer {
+    font-family: 'indie flower', cursive;
+    left: 165px;
+    top: 260px;
+    position: absolute;
+    width: auto;
+    height: 23px;
+    z-index: 4;
+}
+.googlemap {
+    left: 220px;
+    top: 21px;
+    position: absolute;
+    width: 172px;
+    height: 171px;
+    z-index: 6;
+}
+.googlefont {
+    left: 205px;
+    top: 206px;
+    position: absolute;
+    width: 190px;
+    height: 44px;
+    z-index: 7;
+}
+.halfbgright {
+    background-color: #ffffff;
+    position: absolute;
+    width: 300px;
+    height: 360px;
+    z-index: 1;
+}
+.halfbg {
+    left: -2px;
+    top: -3px;
+    position: absolute;
+    width: 300px;
+    height: 364px;
+    z-index: 2;
+    background-color: black;
+}
+.bottomline {
+    left: -3px;
+    top: 266px;
+    position: absolute;
+    width: 605px;
+    height: 53px;
+    z-index: 3;
+}
+.verticalsep {
+    left: 58px;
+    top: 269px;
+    position: absolute;
+    width: 5px;
+    height: 47px;
+    z-index: 4;
+}
+.redlinebottom {
+    left: -2px;
+    top: 316px;
+    position: absolute;
+    width: 300px;
+    height: 6px;
+    z-index: 5;
+}
+.globe {
+    left: 300px;
+    position: absolute;
+    width: 300px;
+    height: 360px;
+    z-index: 6;
+}
+.marker {
+    left: 73px;
+    top: 285px;
+    position: absolute;
+    width: 14px;
+    height: 17px;
+    z-index: 7;
+}
+.web {
+    left: 71px;
+    top: 225px;
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    z-index: 8;
+}
+.email {
+    left: 71px;
+    top: 199px;
+    position: absolute;
+    width: 19px;
+    height: 14px;
+    z-index: 9;
+}
+.phone {
+    left: 70px;
+    top: 171px;
+    position: absolute;
+    width: 21px;
+    height: 14px;
+    z-index: 10;
+}
+.mobilephone {
+    left: 75px;
+    top: 140px;
+    position: absolute;
+    width: 11px;
+    height: 20px;
+    z-index: 11;
+}
+.infowindow-address {
+    left: 96px;
+    top: 278px;
+    position: absolute;
+    width: 150px;
+    height: 26px;
+    z-index: 12;
+    color: black;
+}
+.infowindow-website {
+    left: 96px;
+    top: 228px;
+    position: absolute;
+    width: 74px;
+    height: 14px;
+    z-index: 13;
+}
+.infowindow-email {
+    left: 97px;
+    top: 200px;
+    position: absolute;
+    width: 75px;
+    height: 14px;
+    z-index: 14;
+}
+.infowindow-telephone {
+    left: 97px;
+    top: 172px;
+    position: absolute;
+    width: 150px;
+    height: 11px;
+    z-index: 15;
+}
+.infowindow-mobile {
+    left: 97px;
+    top: 145px;
+    position: absolute;
+    width: 150px;
+    height: 11px;
+    z-index: 16;
+}
+.infowindow-title {
+    left: 72px;
+    top: 35px;
+    position: absolute;
+    width: 200px;
+    height: 18px;
+    z-index: 18;
+}
+.info-image {
+    width: 300px;
+    height: 360px;
+}
+/* entire container, keeps perspective */
+
+.flip-container {
+    perspective: 600px;
+    transform-style: preserve-3d;
+}
+/*  updated! flip the pane when hovered */
+
+.flip-container:hover .back-infowindow {
+    -webkit-transform: rotatex(0deg);
+    -moz-transform: rotatex(0deg);
+    -o-transform: rotatex(0deg);
+    transform: rotatey(0deg);
+}
+.flip-container:hover .front-infowindow {
+    -webkit-transform: rotatey(180deg);
+    -moz-transform: rotatey(180deg);
+    -o-transform: rotatey(180deg);
+    transform: rotatey(180deg);
+}
+.flip-container,
+.front-infowindow,
+.back-infowindow {
+    width: 600px;
+    height: 360px;
+}
+/* flip speed goes here */
+
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+/* hide back of pane during swap */
+
+.front-infowindow,
+.back-infowindow {
+    backface-visibility: hidden;
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*  updated! front pane, placed above back */
+
+.mobile-infowindow {
+    display: block;
+    width: 200px;
+    height: 120px;
+    color: #ffffff;
+    z-index: 5;
+    float: left;
+    background-color: #000000;
+}
+.mobile-infowindow-content {
+    display: inline-block;
+    width: 100px;
+    height: 120px;
+}
+.mobile-infowindow-contentdiv {
+    margin: 5px;
+}
+.mobile-infowindow-address {
+	margin-top: 10px;
+    width: 90px;
+	height: auto;
+}
+.mobile-infowindow-address small {
+	font-size: 0.2em;
+}
+.mobile-infowindow-image {
+    display: inline-block;
+    width: 100px;
+    height: 120px;
+    z-index: 1;
+    float: right;
+}
+.front-infowindow {
+    z-index: 2;
+    -webkit-transform: rotatey(180deg);
+    -moz-transform: rotatey(180deg);
+    -o-transform: rotatey(180deg);
+    transform: rotatey(0deg);
+}
+/* back, initially hidden pane */
+
+.back-infowindow {
+    -webkit-transform: rotatey(-180deg);
+    -moz-transform: rotatey(-180deg);
+    -o-transform: rotatey(-180deg);
+    transform: rotatey(-180deg);
+}
+/* 
+some vertical flip updates 
+*/
+
+.vertical.flip-container {
+    position: relative;
+}
+.vertical .back-infowindow {
+    -webkit-transform: rotatex(180deg);
+    -moz-transform: rotatex(180deg);
+    -o-transform: rotatex(180deg);
+    transform: rotatex(180deg);
+}
+.vertical.flip-container:hover .back-infowindow {
+    -webkit-transform: rotatex(0deg);
+    -moz-transform: rotatex(0deg);
+    -o-transform: rotatex(0deg);
+    transform: rotatex(0deg);
+}
+.vertical.flip-container:hover .front-infowindow {
+    -webkit-transform: rotatex(180deg);
+    -moz-transform: rotatex(180deg);
+    -o-transform: rotatex(180deg);
+    transform: rotatex(180deg);
+}

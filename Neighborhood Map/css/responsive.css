@@ -1,0 +1,26 @@
+@media screen and (max-width: 430px) {
+    .controls {
+        width: 25%;
+    }
+}
+@media screen and (max-width: 550px) {
+    .controls {
+        width: 40%;
+    }
+}
+@media screen and (max-height: 689px) {
+    .weather-container {
+        bottom: 15%;
+    }
+}
+/* INFOWINDOWS MOBILE RESPONSIVE */
+
+@media screen and (max-width: 650px) {
+    /* Hiding Infomarker front and back */
+    
+    .vertical,
+    .flipper,
+    .flip-container {
+        display: none;
+    }
+}
