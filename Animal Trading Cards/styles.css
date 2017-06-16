@@ -1,0 +1,61 @@
+/* add your CSS here */
+html {
+	background-image: url(husky-background.jpg);
+	background-size: 100% 100%;                    
+    background-repeat:   no-repeat;
+    background-position: center;
+	vh: 100%;
+	min-height: 895px;
+	
+}
+
+body {	
+	width: 380px;
+	margin: 10% auto 15% 10% ;
+	padding: 0;
+	vh: 100%;
+}
+
+.main {
+	width: 90%;
+	margin: auto;
+	border: solid #0796be 2px;
+	background-color:#0abaeb;
+	border-radius: 12px;
+	box-shadow: 2px 4px 2px #0796be;
+}
+
+.head {
+	margin: 0 4.25% 0 4.25%;
+}
+
+.content {
+	margin: 0 4.25% 0 4.25%;	
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+.animals {
+	width: 300px;
+	height: 200px;
+}
+
+p {
+	font-size: 1em;
+}
+
+.italic {
+	font-style: italic;
+}
+
+span {
+	font-weight: bold;
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
